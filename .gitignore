@@ -1,0 +1,17 @@
+# Ignore folders
+MODEL/
+venv/
+__pycache__/
+
+# Ignore files
+zAccuracy.py
+*.pyc
+*.pyo
+*.pyd
+
+# Optional: ignore DB file if not needed in Git
+# users.db
+
+# Ignore environment/config
+.env
+.DS_Store

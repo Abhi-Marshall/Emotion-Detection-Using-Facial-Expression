@@ -1,0 +1,207 @@
+/* ===================== GENERAL STYLES (Non-conflicting) ===================== */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #e0e0e0; /* Greyish background */
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================== WELCOME PAGE STYLES ===================== */
+/* Container for sidebar and main content */
+.page-container {
+  display: flex;
+}
+
+/* Main content area styling */
+.main-content {
+  width: 80%;
+  padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 50px; /* Collapsed width */
+  background: #e6f2ff;
+  padding: 20px;
+  min-height: calc(100vh - 100px);
+  transition: width 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu-button:hover ~ .menu-options,
+.menu-button:hover ~ .sidebar {
+  width: 20%; /* Expanded width */
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: #2575fc;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-options {
+  display: none; /* Hidden when collapsed */
+}
+
+.menu-button:hover ~ .menu-options {
+  display: block; /* Show when Menu button is hovered */
+}
+
+/* Camera Section */
+.camera-section {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 8px;
+  /* Removed background: #e6f2ff; */
+}
+
+.camera-button {
+  font-size: 64px; /* Larger icon */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #2575fc;
+  display: block;
+  margin: 0 auto; /* Centered */
+}
+
+.camera-text {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #666; /* Light text */
+}
+
+.camera-options {
+  margin-top: 10px;
+  display: none; /* Hidden by default */
+}
+
+.camera-options button {
+  margin: 5px;
+  padding: 10px 20px;
+  background: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.camera-options button:hover {
+  background: #1a5bb8;
+}
+
+/* Banner */
+.banner {
+  background: linear-gradient(135deg, #6a11cb, #2575fc) !important;
+  padding: 30px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+}
+
+.banner h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.banner p {
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* ===================== AUTH PAGES (LOGIN & SIGNUP) ===================== */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-page .login-container,
+.auth-page .signup-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 90%;
+  margin: 50px auto;
+}
+
+.auth-page h2 {
+  color: #2575fc;
+}
+
+/* Form Styles */
+.auth-page form label {
+  font-weight: bold;
+}
+
+.auth-page form .form-control {
+  border-radius: 4px;
+}
+
+.auth-page form .btn-primary {
+  background: #2575fc;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.auth-page form .btn-primary:hover {
+  background: #1a5bb8;
+}
+
+/* ===================== BANNER & CAROUSEL SECTION ===================== */
+/* Ensure banner background is not overridden */
+.banner {
+  background: linear-gradient(135deg, #6a11cb, #2575fc) !important;
+  padding: 60px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure banner container keeps transparency */
+.banner .container {
+  background: rgba(255, 255, 255, 0.1) !important;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Make sure it applies to index.html only */
+#index-banner {
+  background: linear-gradient(135deg, #6a11cb, #2575fc) !important;
+}
+
+/* CAROUSEL */
+.carousel-section .carousel-item img {
+  object-fit: cover;
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-section .carousel-caption h3 {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* ===================== ABOUT PAGE STYLES ===================== */
+.about-section h2,
+.about-section h3 {
+  color: #2575fc;
+  margin-top: 20px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
